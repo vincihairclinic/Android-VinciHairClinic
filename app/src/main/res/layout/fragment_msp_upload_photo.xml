@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white_FFFFFF">
+
+    <!--    <view-->
+    <!--        android:id="@+id/scipButton"-->
+    <!--        class="com.google.android.material.card.MaterialCardView"-->
+    <!--        android:layout_width="61dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_marginEnd="5dp"-->
+    <!--        app:cardBackgroundColor="@color/background_white_FFFFFF_15"-->
+    <!--        app:cardCornerRadius="16dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/scipButtonText"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:fontFamily="@font/montserrat_semi_bold"-->
+    <!--        android:text="Scip"-->
+    <!--        android:textColor="@color/primary_brown_7D5F2B"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <view
+        android:id="@+id/backButton"
+        class="com.google.android.material.card.MaterialCardView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/background_light_grey_F8F8F5"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="@+id/backButton"
+        app:layout_constraintStart_toStartOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton"
+        app:srcCompat="@drawable/ic_arrow_left_brown_16" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nestedConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/titleField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/cormorant_bold"
+                android:gravity="center"
+                android:text="Take a few photos of your head"
+                android:textColor="@color/text_black_111111"
+                android:textSize="42sp"
+                tools:ignore="MissingConstraints" />
+
+            <RelativeLayout
+                android:id="@+id/videoViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleField">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/videoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardBackgroundColor="@color/background_white_FFFFFF"
+                    app:cardCornerRadius="35dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/selector_brown_light_brown"
+                    app:strokeWidth="1dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/drawableStart"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="8dp"
+                            android:background="@color/background_white_FFFFFF"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/hair_video_icon"
+                            app:riv_mutate_background="true"
+                            app:riv_oval="true" />
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/drawableEnd"
+                            android:layout_width="54dp"
+                            android:layout_height="54dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:background="@color/background_white_FFFFFF"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_play_brown"
+                            app:riv_mutate_background="true"
+                            app:riv_oval="true" />
+
+                        <LinearLayout
+                            android:id="@+id/textContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/watchText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:gravity="center"
+                                android:text="Watch"
+                                android:textColor="@color/primary_brown_7D5F2B"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:fontFamily="@font/montserrat_semi_bold"
+                                android:text="How to take photos?"
+                                android:textColor="@color/text_dark_0E1012" />
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/textBtn"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:layout_alignParentBottom="true"
+                android:background="#F0FFFFFF"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentTop="true"
+                    android:progress="24"
+                    android:progressTint="@color/primary_dark_brown_503629"
+                    android:secondaryProgress="100"
+                    android:secondaryProgressTint="@color/background_light_brown_F1F0EA" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/bottomBackButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="@color/background_light_brown_F1F0EA"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:id="@+id/backButtonText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:gravity="center_horizontal"
+                                    android:text="Back"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/primary_brown_7D5F2B"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <view
+                        android:id="@+id/saveLotti"
+                        class="com.airbnb.lottie.LottieAnimationView"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/backButton"
+                        app:lottie_autoPlay="true"
+                        app:lottie_colorFilter="@color/primary_dark_brown_503629"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/loading" />
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardContainer"
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/selector_brown_text_light_40"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/imageContainer"
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_vertical"
+                                app:cardBackgroundColor="@color/selector_dark_brown_text_dark_40"
+                                app:cardCornerRadius="16dp"
+                                app:cardElevation="0dp">
+
+                                <ImageView
+                                    android:id="@+id/drawable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="center"
+                                    android:src="@drawable/ic_arrow_right_2_white_19"
+                                    tools:ignore="ContentDescription" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:id="@+id/nextButtonText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="@font/montserrat_semi_bold"
+                                    android:gravity="center_horizontal"
+                                    android:text="Next"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/text_white_FFFFFF"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toTopOf="@+id/textBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/videoViewContainer">
+
+                <include
+                    android:id="@+id/includePhotoFrontCard"
+                    layout="@layout/view_make_hair_photo_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    android:id="@+id/includePhotoSideCard"
+                    layout="@layout/view_make_hair_photo_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/includePhotoFrontCard" />
+
+                <include
+                    android:id="@+id/includePhotoBackCard"
+                    layout="@layout/view_make_hair_photo_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/includePhotoSideCard" />
+
+                <include
+                    android:id="@+id/includePhotoTopCard"
+                    layout="@layout/view_make_hair_photo_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/includePhotoBackCard" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:id="@+id/rootView"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/background_white_FFFFFF">-->
+
+    <!--        <com.google.android.material.card.MaterialCardView-->
+    <!--            android:id="@+id/backButton"-->
+    <!--            android:layout_width="32dp"-->
+    <!--            android:layout_height="32dp"-->
+    <!--            android:layout_marginStart="20dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            app:cardBackgroundColor="@color/background_light_grey_F8F8F5"-->
+    <!--            app:cardCornerRadius="16dp"-->
+    <!--            app:cardElevation="0dp">-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent">-->
+
+    <!--                <ImageView-->
+    <!--                    android:layout_width="16dp"-->
+    <!--                    android:layout_height="16dp"-->
+    <!--                    android:layout_centerInParent="true"-->
+    <!--                    android:src="@drawable/ic_cross" />-->
+    <!--            </RelativeLayout>-->
+
+    <!--        </com.google.android.material.card.MaterialCardView>-->
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/backButton"-->
+    <!--        android:layout_above="@id/bottomContainer"-->
+    <!--        android:fillViewport="true">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/titleField"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="24dp"-->
+    <!--                android:layout_marginTop="48dp"-->
+    <!--                android:layout_marginEnd="24dp"-->
+    <!--                android:layout_gravity="center_horizontal"-->
+    <!--                android:fontFamily="@font/cormorant_bold"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="Take a selfie or upload photo"-->
+    <!--                android:textColor="@color/text_black_111111"-->
+    <!--                android:textSize="42sp" />-->
+
+    <!--            <com.makeramen.roundedimageview.RoundedImageView-->
+    <!--                android:id="@+id/userImage"-->
+    <!--                android:layout_width="120dp"-->
+    <!--                android:layout_height="120dp"-->
+    <!--                android:layout_gravity="center_horizontal"-->
+    <!--                android:layout_marginTop="74dp"-->
+    <!--                android:scaleType="centerCrop"-->
+    <!--                android:src="@drawable/ic_user"-->
+    <!--                app:riv_oval="true" />-->
+
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginTop="75dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:elevation="0dp"-->
+    <!--                app:cardBackgroundColor="@color/background_white_FFFFFF"-->
+    <!--                app:cardCornerRadius="15dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                app:strokeColor="@color/background_light_brown_F1F0EA"-->
+    <!--                app:strokeWidth="1dp">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginStart="16dp"-->
+    <!--                        android:layout_marginTop="16dp"-->
+    <!--                        android:layout_marginEnd="16dp"-->
+    <!--                        android:layout_marginBottom="16dp"-->
+    <!--                        android:drawableStart="@drawable/info_brown"-->
+    <!--                        android:drawablePadding="12dp"-->
+    <!--                        android:text="Please choose a picture of yourself that is taken straight on and does not crop any part of your face or head. See Full Guide" />-->
+    <!--                </RelativeLayout>-->
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:id="@+id/TakeSelfieButton"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="48dp"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                app:cardCornerRadius="24dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                app:cardBackgroundColor="@color/background_light_grey_F8F8F5"-->
+    <!--                android:textColor="@color/text_black_111111">-->
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginStart="24dp"-->
+    <!--                        android:layout_marginEnd="16dp"-->
+    <!--                        android:layout_marginBottom="16dp"-->
+    <!--                        android:drawableStart="@drawable/camera_brown"-->
+    <!--                        android:textColor="@color/text_dark_0E1012"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:textSize="15sp"-->
+    <!--                        android:fontFamily="@font/montserrat_medium"-->
+    <!--                        android:gravity="center_vertical"-->
+    <!--                        android:drawablePadding="12dp"-->
+    <!--                        android:text="Take a selfie"/>-->
+    <!--                </RelativeLayout>-->
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+    <!--            <com.google.android.material.card.MaterialCardView-->
+    <!--                android:id="@+id/SelectFromGalleryButton"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="48dp"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:layout_marginBottom="24dp"-->
+    <!--                app:cardCornerRadius="24dp"-->
+    <!--                app:cardElevation="0dp"-->
+    <!--                app:cardBackgroundColor="@color/background_light_grey_F8F8F5"-->
+    <!--                android:textColor="@color/text_black_111111">-->
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="match_parent"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <TextView-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_marginStart="24dp"-->
+    <!--                        android:layout_marginEnd="16dp"-->
+    <!--                        android:layout_marginBottom="16dp"-->
+    <!--                        android:drawableStart="@drawable/gallery_brown"-->
+    <!--                        android:textColor="@color/text_dark_0E1012"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:textSize="15sp"-->
+    <!--                        android:fontFamily="@font/montserrat_medium"-->
+    <!--                        android:gravity="center_vertical"-->
+    <!--                        android:drawablePadding="12dp"-->
+    <!--                        android:text="Select from gallery"/>-->
+    <!--                </RelativeLayout>-->
+    <!--            </com.google.android.material.card.MaterialCardView>-->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.core.widget.NestedScrollView>-->
+
+    <!--</RelativeLayout>-->

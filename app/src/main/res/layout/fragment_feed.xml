@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white_FFFFFF"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:contentScrim="@color/background_white_FFFFFF"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+
+            app:scrimAnimationDuration="0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstItemConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/app_bar_image"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="w,1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/app_bar_image"
+                    app:layout_constraintEnd_toEndOf="@+id/app_bar_image"
+                    app:layout_constraintStart_toStartOf="@+id/app_bar_image"
+                    app:layout_constraintTop_toTopOf="@+id/app_bar_image"
+                    app:srcCompat="@drawable/background_linear_dark_brown_transparent" />
+
+                <TextView
+                    android:id="@+id/titleTextField"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="38dp"
+                    android:fontFamily="@font/cormorant_bold"
+                    android:gravity="center"
+                    android:textColor="@color/text_white_FFFFFF"
+                    android:textSize="32sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/app_bar_image"
+                    app:layout_constraintEnd_toEndOf="@+id/app_bar_image"
+                    app:layout_constraintStart_toStartOf="@+id/app_bar_image" />
+
+                <TextView
+                    android:id="@+id/dateTextField"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:textColor="@color/text_white_FFFFFF_75"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toTopOf="@+id/titleTextField"
+                    app:layout_constraintEnd_toEndOf="@+id/titleTextField"
+                    app:layout_constraintStart_toStartOf="@+id/titleTextField" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_white_FFFFFF">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                app:tabTextAppearance="@style/MyCustomTextAppearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/primary_dark_brown_503629"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="1dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/primary_dark_brown_503629"
+                app:tabTextColor="@color/text_light_495057_65" />
+
+            <view
+                android:id="@+id/view4"
+                class="com.google.android.material.divider.MaterialDivider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/text_light_495057_10"
+                app:layout_constraintEnd_toEndOf="@+id/tabLayout"
+                app:layout_constraintStart_toStartOf="@+id/tabLayout"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/tabViewPagerContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

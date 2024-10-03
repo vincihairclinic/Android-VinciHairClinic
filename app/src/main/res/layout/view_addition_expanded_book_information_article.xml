@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/additionRootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/titleTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/cormorant_bold"
+        android:textColor="@color/text_dark_0E1012"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Pre op" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_marginTop="32dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextField" />
+
+    <TextView
+        android:id="@+id/mainTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/text_dark_0E1012"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRecyclerView"
+        tools:text="Once you have reserved your surgery date, the administration team will send you confirmation of your procedure, along with an electronic document to sign that confirms the details of your treatment. Your care is then passed to the medical team that will be looking after you on your procedure day.  The medical team will contact you with details of your itinerary, including your start time. They will send you a medical history form which you will need to return promptly. It ́s important that all of your medical history, including any medications that you are taking are disclosed at this point to avoid any unnecessary complications on the day. You will also receive a copy of the Vinci pre-op instructions. These are basic guidelines that you will need to follow in the 7 days leading up to your procedure day.  Finally, one week before your procedure, a member of the medical team will call you. The pre-op call is designed to cover any last minute questions you may have, so that any doubts are removed prior to you seeing us and to ensure that you are ready for your big day. We will also take your lunch order at this point, so please advise us if you have any special dietary requirements." />
+
+    <LinearLayout
+        android:id="@+id/itemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTextField" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.folioreader.ui.activity.FolioActivity"
+    tools:menu="@menu/menu_main">
+
+    <com.folioreader.ui.view.FolioAppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:elevation="0dp"
+        app:elevation="0dp">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="13dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_left_black_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/itemMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@id/itemBack"
+                android:padding="5dp"
+                android:src="@drawable/ic_book_content_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@id/itemContainer"
+                android:layout_toEndOf="@id/itemMenu"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/itemContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/itemConfig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_text_format_24" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/itemSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_search_black_24" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/itemBookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="13dp"
+                    android:padding="5dp"
+                    android:scaleType="center"
+                    android:src="@drawable/selector_bookmark" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#F0F3F8" />
+        </RelativeLayout>
+    </com.folioreader.ui.view.FolioAppBarLayout>
+
+    <com.folioreader.ui.view.DirectionalViewpager
+        android:id="@+id/folioPageViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:direction="vertical" />
+</LinearLayout>

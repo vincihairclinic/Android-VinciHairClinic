@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navigation_height">20dp</dimen>
+<!--    <dimen name="toolbar_height">44dp</dimen>-->
+<!--    <dimen name="stroke_width_1_dp">1dp</dimen>-->
+<!--    <dimen name="width_2dp">2dp</dimen>-->
+<!--    <dimen name="drawable_padding_10_dp">10dp</dimen>-->
+<!--    <dimen name="drawable_padding_8_dp">8dp</dimen>-->
+<!--    <dimen name="drawable_padding_5_dp">5dp</dimen>-->
+<!--    <dimen name="margin_14_dp">14dp</dimen>-->
+</resources>

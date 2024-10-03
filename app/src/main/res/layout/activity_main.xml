@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white_FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.vinciandroidv2.ui.global.NonSwipeableViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/bottomNavigationView"
+            android:layout_alignParentTop="true"
+            android:isScrollContainer="false"
+            android:nestedScrollingEnabled="false" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/background_white_FFFFFF"
+            android:isScrollContainer="false"
+            android:nestedScrollingEnabled="false"
+            app:itemBackground="@android:color/transparent"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="55dp"
+        android:paddingBottom="1dp"
+
+        tools:targetApi="lollipop">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="10dp"
+            app:cardBackgroundColor="@color/text_white_FFFFFF"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:id="@+id/player"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="gone"
+                android:layout_marginStart="10dp"
+                android:paddingBottom="1dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imagePodcastMain"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="13dp"
+                    app:riv_mutate_background="true" />
+
+                <TextView
+                    android:id="@+id/namePodcastMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/playAudio"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toStartOf="@id/close"
+                    android:layout_toEndOf="@+id/imagePodcastMain"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="фівфівфів"
+                    android:textColor="@color/text_dark_0E1012"
+                    android:textSize="13sp" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/infoPlayMain"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@+id/namePodcastMain"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:layout_toEndOf="@+id/imagePodcastMain"-->
+<!--                    android:drawablePadding="8dp"-->
+<!--                    android:fontFamily="@font/montserrat_medium"-->
+<!--                    android:text="фівфівфі"-->
+<!--                    android:textColor="@color/text_dark_0E1012"-->
+<!--                    android:textSize="13sp" />-->
+
+                <ImageView
+                    android:id="@+id/playAudio"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@+id/imagePodcastMain"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_play_smal" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_toEndOf="@+id/playAudio">
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/bar_progress_play" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_cross_round_brown_24" />
+
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+
+</FrameLayout>

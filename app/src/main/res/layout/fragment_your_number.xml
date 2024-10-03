@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white_FFFFFF"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="true">
+
+        <view
+            android:id="@+id/backButton"
+            class="com.google.android.material.card.MaterialCardView"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/background_light_grey_F8F8F5"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp" />
+
+        <view
+            android:id="@+id/scipButton"
+            class="com.google.android.material.card.MaterialCardView"
+            android:layout_width="61dp"
+            android:layout_height="32dp"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            app:cardBackgroundColor="@color/background_white_FFFFFF_15"
+            app:cardCornerRadius="16dp"
+         />
+        <TextView
+            android:id="@+id/scipText"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_alignParentEnd="true"
+            android:text="Skip"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="@color/primary_brown_7D5F2B"
+            android:textSize="14sp"
+            />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@drawable/ic_arrow_left_brown_16" />
+
+        <TextView
+            android:id="@+id/titleField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/cormorant_bold"
+            android:gravity="center"
+            android:textColor="@color/text_black_111111"
+            android:textSize="42sp" />
+
+        <LinearLayout
+            android:id="@+id/input_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textBtn"
+            android:layout_below="@+id/titleField"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/includeNameCard"
+                layout="@layout/item_row_edit_text_sample_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/includeEmailCard"
+                layout="@layout/item_row_edit_text_sample_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <include
+                    android:id="@+id/includePhonecodeCard"
+                    layout="@layout/view_phone_code_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp" />
+
+
+                <EditText
+                    android:id="@+id/phoneNumberField"
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toEndOf="@+id/includePhonecodeCard"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:hint="000 000 0000"
+                    android:inputType="number"
+                    android:textSize="22sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/textBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:elevation="10dp"
+            android:nestedScrollingEnabled="true">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:progress="33"
+                android:progressTint="@color/primary_dark_brown_503629"
+                android:secondaryProgress="100"
+                android:secondaryProgressTint="@color/background_light_brown_F1F0EA" />
+
+            <TextView
+                android:id="@+id/backButtonText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textColor="#503629"
+                android:textSize="14sp" />
+
+            <include
+                android:id="@+id/includeNextButton"
+                layout="@layout/view_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

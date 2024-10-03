@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imagePodcast"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="20dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="13dp"
+        app:riv_mutate_background="true" />
+
+    <TextView
+        android:id="@+id/namePodcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/imagePodcast"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/text_dark_0E1012"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/infoPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/imagePodcast"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_dark_0E1012"
+        android:textSize="13sp"
+        app:drawableStartCompat="@drawable/ic_play_smal" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="18dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_shape" />
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:background="@color/color_495057_10"
+        android:layout_height="1dp"/>
+</RelativeLayout>

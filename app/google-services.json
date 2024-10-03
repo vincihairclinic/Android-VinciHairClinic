@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "258769810183",
+    "project_id": "vinci-v2",
+    "storage_bucket": "vinci-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258769810183:android:8b508f8ef1c3f7f4058ba2",
+        "android_client_info": {
+          "package_name": "app.vinci.hair.clinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258769810183-m6a7p53hh8h8t8s3ppep99k2cr0o9pto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYUMcU0WE4nnJO3AxMhxau0uMOfChCGag"
+        },
+        {
+          "current_key": "AIzaSyA2lnHCDhYcB-M1KIq5fuDkLMl5bNnA-OQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258769810183-m6a7p53hh8h8t8s3ppep99k2cr0o9pto.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "258769810183-9k0lt1joon92tg1bdcg0949231l4ia1b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.vinci.hair.clinic"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258769810183:android:8b6162b0ec19c79f058ba2",
+        "android_client_info": {
+          "package_name": "app.vincihairclinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258769810183-m6a7p53hh8h8t8s3ppep99k2cr0o9pto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYUMcU0WE4nnJO3AxMhxau0uMOfChCGag"
+        },
+        {
+          "current_key": "AIzaSyA2lnHCDhYcB-M1KIq5fuDkLMl5bNnA-OQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258769810183-m6a7p53hh8h8t8s3ppep99k2cr0o9pto.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "258769810183-9k0lt1joon92tg1bdcg0949231l4ia1b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.vinci.hair.clinic"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258769810183:android:095d1e0effaf50c5058ba2",
+        "android_client_info": {
+          "package_name": "com.example.vinciandroidv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258769810183-pg2bc4utstoo3qifgf1uuv1qco77b066.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vinciandroidv2",
+            "certificate_hash": "3c3505e120d0da47e2b1d624c1ed5201cd891884"
+          }
+        },
+        {
+          "client_id": "258769810183-m6a7p53hh8h8t8s3ppep99k2cr0o9pto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYUMcU0WE4nnJO3AxMhxau0uMOfChCGag"
+        },
+        {
+          "current_key": "AIzaSyA2lnHCDhYcB-M1KIq5fuDkLMl5bNnA-OQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258769810183-m6a7p53hh8h8t8s3ppep99k2cr0o9pto.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "258769810183-9k0lt1joon92tg1bdcg0949231l4ia1b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.vinci.hair.clinic"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

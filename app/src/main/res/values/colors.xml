@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary_brown_7D5F2B">#7D5F2B</color>
+    <color name="primary_brown_7D5F2B_75">#BF7D5F2B</color>
+    <color name="primary_dark_brown_503629">#503629</color>
+    <color name="secondary_light_brown_ECCAA3">#ECCAA3</color>
+    <color name="secondary_light_brown_ECCAA3_90">#E6ECCAA3</color>
+
+    <color name="text_dark_0E1012">#0E1012</color>
+    <color name="text_dark_0E1012_40">#660E1012</color>
+    <color name="text_black_111111">#111111</color>
+    <color name="text_black_000000">#000000</color>
+    <color name="text_black_000000_6">#0F000000</color>
+    <color name="text_black_000000_10">#1A000000</color>
+    <color name="text_black_000000_32">#52000000</color>
+    <color name="text_black_000000_50">#80000000</color>
+    <color name="text_black_000000_65">#A6000000</color>
+    <color name="text_light_495057">#495057</color>
+    <color name="text_light_495057_10">#1A495057</color>
+    <color name="text_light_495057_40">#66495057</color>
+    <color name="text_light_495057_50">#80495057</color>
+    <color name="text_light_495057_65">#A6495057</color>
+    <color name="text_light_495057_75">#BF495057</color>
+    <color name="text_light_8E8E93">#8E8E93</color>
+    <color name="text_white_FFFFFF">#FFFFFF</color>
+    <color name="text_white_FFFFFF_75">#BFFFFFFF</color>
+    <color name="color_transparent">#00FF0000</color>
+    <color name="background_white_FFFFFF">#FFFFFF</color>
+    <color name="background_white_FFFFFF_15">#26FFFFFF</color>
+    <color name="background_white_FFFFFF_90">#E6FFFFFF</color>
+    <color name="background_white_FFFFFF_94">#F0FFFFFF</color>
+    <color name="background_light_brown_F1F0EA">#F1F0EA</color>
+    <color name="background_light_grey_F8F8F5">#F8F8F5</color>
+    <color name="background_light_FCF7F2">#FCF7F2</color>
+    <color name="color_495057_10">#1A495057</color>
+    <color name="color_F8F8F5">#F8F8F5</color>
+    <color name="color_F1F0EA">#F1F0EA</color>
+    <color name="color_ECCAA3">#1AECCAA3</color>
+</resources>

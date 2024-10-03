@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeNavItem"
+        android:icon="@drawable/selector_nav_bar_home"
+        android:title="" />
+
+    <item
+        android:id="@+id/clinicsNavItem"
+        android:icon="@drawable/selector_nav_bar_clinics"
+        android:title="" />
+
+    <item
+        android:id="@+id/storeNavItem"
+        android:icon="@drawable/selector_nav_bar_store"
+        android:title="" />
+
+    <item
+        android:id="@+id/feedNavItem"
+        android:icon="@drawable/selector_nav_bar_feed"
+        android:title="" />
+</menu>
